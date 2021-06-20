@@ -51,7 +51,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(dateFormatChecker);
 app.use(recordRouter);
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+app.use("/", swaggerUi.serve, swaggerUi.setup(specs));
 
 /*Start Connect MONGODB*/
 

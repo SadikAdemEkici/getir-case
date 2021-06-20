@@ -1,10 +1,10 @@
 {
-  "name": "productsapp",
+  "name": "getircaseapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon node app.js",
     "test": "PORT=3001 jest",
     "lint": "eslint \"**/*.js\""
   },
@@ -21,5 +21,8 @@
     "supertest": "^6.1.3",
     "swagger-jsdoc": "^6.1.0",
     "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
