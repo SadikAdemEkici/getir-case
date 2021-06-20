@@ -1,0 +1,23 @@
+{
+  "name": "productsapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "PORT=3001 jest",
+    "lint": "eslint \"**/*.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.18.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.3",
+    "jest": "^27.0.4",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.9.13",
+    "supertest": "^6.1.3"
+  }
+}
