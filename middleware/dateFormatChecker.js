@@ -1,5 +1,6 @@
 'use strict';
-var _=require('lodash')
+var _=require('lodash'),
+    responseHelper = require('../helpers/response.helper');
 
 function isValidDate(dateString) {
     if(!dateString) return true
@@ -32,13 +33,28 @@ function dateFormatChecker(req, res, next) {
     var isEndTimeValid = isValidDate(endTime);
 
     if(!isStartTimeValid && !isEndTimeValid)
-        next(res.status(400).send('Start Date and End Date are not valid format! The date format should be “YYYY-MM-DD”.'));
+        next(
+            res.status(400)
+                .send(
+                    responseHelper.error(400, 'Start Date and End Date are not valid format! The date format should be “YYYY-MM-DD”.')
+                )
+        );
 
     else if(!isStartTimeValid)
-        next(res.status(400).send('Start Date is not valid format! The date format should be “YYYY-MM-DD”.'))
+        next(
+            res.status(400)
+                .send(
+                    responseHelper.error(400, 'Start Date is not valid format! The date format should be “YYYY-MM-DD”.')
+                )
+        );
 
     else if(!isEndTimeValid)
-        next(res.status(400).send('End Date is not valid bad format! The date format should be “YYYY-MM-DD”.'))
+        next(
+            res.status(400)
+                .send(
+                    responseHelper.error(400, 'End Date is not valid bad format! The date format should be “YYYY-MM-DD”.')
+                )
+        );
 
     return next();
 }
