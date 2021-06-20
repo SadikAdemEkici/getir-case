@@ -35,7 +35,7 @@ or
 
 ```bash
 npm install
-npm run start
+npm run dev or npm start
 ``` 
 
 ### Running the Test
