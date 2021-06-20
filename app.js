@@ -35,6 +35,9 @@ const swaggerOptions = {
             {
                 url: serverUrl,
             },
+            {
+                url: 'https://getir-case-app-ae.herokuapp.com'
+            }
         ],
     },
     apis: ["./routes/*.js"],
