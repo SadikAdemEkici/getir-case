@@ -65,7 +65,6 @@ db.once('open', function() {
     console.log('Connected!');
     app.listen(port, () => {
         console.log('Server is up and running on ' + serverUrl);
-        console.log('Swagger UI -> ' + serverUrl + '/api-docs');
     });
 });
 
